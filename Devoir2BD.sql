@@ -1,6 +1,6 @@
 
 ----------------------------------------------->BINOME : KERDOUN WALID && AMAHRI LATIFA<------------------------------------------------
-
+set serveroutput on;
 -->Question C7
 
 DECLARE
@@ -62,7 +62,6 @@ begin
     EXCEPTION
         WHEN erreur_insr1 then
             dbms_output.put_line('Nom Pilote: ' || vnom || ' OK');  
-             dbms_output.put_line('Nom Pilote: ' || vnom || ' comm < sal');
         WHEN erreur_insr2 then
             dbms_output.put_line('PILOTE INCONNUE');
         WHEN erreur_insr3 then
@@ -84,7 +83,7 @@ WITH READ ONLY;
 
 -->Question D3
 create or replace view dervol as
-select vol,max(date_vol) as derniereDatedeVol from affectation group by vol;
+select avion,max(date_vol) as derniereDatedeVol from affectation group by avion;
 
 -->Question D4
 create or replace view cr_pilote as
