@@ -118,7 +118,7 @@ begin
             insert into ERREUR values (num_pilote,'PILOTE INCONNUE');
             dbms_output.put_line('PILOTE INCONNUE');
         WHEN erreur_insr3 then
-            insert into ERREUR values (num_pilote,'OK');
+            insert into ERREUR values (num_pilote,'OK,comm > sal');
             dbms_output.put_line('Nom Pilote: ' || vnom || ' OK');  
            dbms_output.put_line('Nom Pilote: ' || vnom || ' comm > sal');      
 end;
